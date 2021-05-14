@@ -39,11 +39,11 @@ def get_pdf(links=list):
 
 if __name__ == "__main__":
     try:
-        # for i in range(pages):
-        #     current_url = url + str(i)
-        #     print(f"Looking on {i} of {pages} pages.")
-        #     list_of_links = get_page(current_url)
-        #     get_pdf(links=list_of_links)
+        for i in range(pages):
+            current_url = url + str(i)
+            print(f"Looking on {i} of {pages} pages.")
+            list_of_links = get_page(current_url)
+            get_pdf(links=list_of_links)
         print("Done!\nTaxation is theft.")
     except KeyboardInterrupt:
         exit(0)
