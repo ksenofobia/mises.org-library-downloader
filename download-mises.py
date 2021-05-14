@@ -30,18 +30,18 @@ def get_pdf(links=list):
         book_url = ''.join(i)
         # join tuples from [2] to [3] included and remove [0] charater(always/)
         book_title = ''.join(i[2:4])[1:]
-        print(f"Downloading {book_title} from {book_url}")
+        print(f"Downloading {book_title} from {book_url}\n")
         book_request = requests.get(book_url)
         with open(book_title, "wb") as file:
             file.write(book_request.content)
-        print(f"Successfully downloaded {book_title}!")
+        print(f"Successfully downloaded {book_title}!\n")
 
 
 if __name__ == "__main__":
     try:
         for i in range(pages):
             current_url = url + str(i)
-            print(f"Looking on {i} of {pages} pages.")
+            print(f"Looking on {i} of {pages} pages.\n")
             list_of_links = get_page(current_url)
             get_pdf(links=list_of_links)
         print("Done!\nTaxation is theft.")
