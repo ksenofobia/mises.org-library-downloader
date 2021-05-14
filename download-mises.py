@@ -1,11 +1,3 @@
-'''
-ALGO:
-    cycle through each page
-    get all links on that page
-    download for each link
-    scrape book's name
-    write this book to the drive as book's name
-'''
 import urllib3
 import re
 import requests
